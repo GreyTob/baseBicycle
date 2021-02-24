@@ -285,3 +285,7 @@ body, .wraper {
 .mailing {
   height: 470px;
 }
+.mailing .contain img {
+  width: 94px;
+  height: 85px;
+}
