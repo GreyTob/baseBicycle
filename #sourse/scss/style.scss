@@ -239,17 +239,22 @@ body, .wraper  {
 }
 
 .shop {
-	height: 534px;
-	.red_button {}
+	//height: 534px;
+	.red_button {
+		height: 535px;
+		border: 2px solid pink;
+	}
 	.discover {
 		height: 200px;
 		background-color: $color_6;
 		text-align: center;
 		position: relative;
+		padding-bottom: 10px;
 		.btn {
 			font-family: lato;
 			font-weight: bold;
 			text-transform: uppercase;
+			cursor: pointer;
 			color: white;
 			background-color: $color_6;
 			border: 1px solid white;
@@ -267,17 +272,22 @@ body, .wraper  {
 }
 
 .mailing {
-	height: 470px;	
-	.contain {
-		img {
-			width: 94px;
-			height: 85px;
-		}
-		p{
+	// .contain {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 470px;	
+		border: 3px solid red;
+			.img {
+				width: 94px;
+				height: 85px;
+				}	
 
-		}
-		form {
-			
-		}
-	}	
+			p{
+				text-align: center;
+			}
+			form {
+				text-align: center;
+			}
+	// }		
 }

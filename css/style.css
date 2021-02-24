@@ -256,19 +256,22 @@ body, .wraper {
   margin-top: 100px;
 }
 
-.shop {
-  height: 534px;
+.shop .red_button {
+  height: 535px;
+  border: 2px solid pink;
 }
 .shop .discover {
   height: 200px;
   background-color: #282f35;
   text-align: center;
   position: relative;
+  padding-bottom: 10px;
 }
 .shop .discover .btn {
   font-family: lato;
   font-weight: bold;
   text-transform: uppercase;
+  cursor: pointer;
   color: white;
   background-color: #282f35;
   border: 1px solid white;
@@ -283,9 +286,19 @@ body, .wraper {
 }
 
 .mailing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 470px;
+  border: 3px solid red;
 }
-.mailing .contain img {
+.mailing .img {
   width: 94px;
   height: 85px;
+}
+.mailing p {
+  text-align: center;
+}
+.mailing form {
+  text-align: center;
 }
