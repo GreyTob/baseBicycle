@@ -99,7 +99,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.work_bike1 .work_small .work_text h2, .work_bike2 .work_small .work_text h2, .work_bike3 .work_small .work_text h2, .about_us h2, .twitter h2 {
+.footer .info .centr h2, .work_bike1 .work_small .work_text h2, .work_bike2 .work_small .work_text h2, .work_bike3 .work_small .work_text h2, .about_us h2, .twitter h2 {
   font-family: lato, verdana, sans-serif;
   font-size: 1.125em;
   line-height: 100%;
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.work_bike1 .work_small .work_text p, .work_bike2 .work_small .work_text p, .work_bike3 .work_small .work_text p, .about_us p, .twitter p {
+.footer .info .centr p, .work_bike1 .work_small .work_text p, .work_bike2 .work_small .work_text p, .work_bike3 .work_small .work_text p, .about_us p, .twitter p {
   font-family: lato, verdana, sans-serif;
   font-size: 0.8em;
   font-weight: 500;
@@ -257,6 +257,7 @@ body, .wraper {
 }
 
 .shop {
+  background-color: #000;
   height: 534px;
 }
 .shop .discover {
@@ -280,4 +281,60 @@ body, .wraper {
   left: 50%;
   margin-right: -50%;
   transform: translate(-50%, -50%);
+}
+
+.footer {
+  height: 250px;
+  background-color: #f7f7f7;
+}
+.footer .container {
+  height: 250px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 87.5px;
+}
+.footer .info {
+  width: 475px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .info .centr h2 {
+  margin-left: 170px;
+  font-size: 14px;
+  color: #848789;
+}
+.footer .info .centr p {
+  margin-left: 170px;
+  font-size: 12px;
+  line-height: 14px;
+}
+.footer .links {
+  width: 475px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer .links img {
+  width: 35px;
+  height: 34;
+  margin: 0 8px;
+}
+.footer .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 475px;
+}
+.footer .logo img {
+  width: 55px;
+  height: 36px;
+  margin-right: 170px;
+}
+.footer .logo p {
+  font-family: lato;
+  font-size: 12px;
+  line-height: 14px;
+  color: #848789;
+  margin-right: 10px;
 }
