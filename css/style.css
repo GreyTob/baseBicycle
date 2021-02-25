@@ -300,12 +300,12 @@ body, .wraper {
   align-items: center;
 }
 .footer .info .centr h2 {
-  margin-left: 150px;
-  font-size: 13px;
+  margin-left: 170px;
+  font-size: 14px;
   color: #848789;
 }
 .footer .info .centr p {
-  margin-left: 150px;
+  margin-left: 170px;
   font-size: 12px;
   line-height: 14px;
 }
@@ -329,11 +329,12 @@ body, .wraper {
 .footer .logo img {
   width: 55px;
   height: 36px;
-  margin-right: 150px;
+  margin-right: 170px;
 }
 .footer .logo p {
   font-family: lato;
   font-size: 12px;
   line-height: 14px;
   color: #848789;
+  margin-right: 10px;
 }

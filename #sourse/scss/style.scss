@@ -285,13 +285,13 @@ body, .wraper  {
 		.centr {
 			h2 {
 				@extend %h2fonts;
-				margin-left: 150px;
-				font-size: 13px;
+				margin-left: 170px;
+				font-size: 14px;
 				color: $color_4;
 			}
 			p {
 				@extend %pfonts;
-				margin-left: 150px;
+				margin-left: 170px;
 				font-size: 12px;
 				line-height: 14px;
 
@@ -322,13 +322,14 @@ body, .wraper  {
 		img {
 			width: 55px;
 			height: 36px;
-			margin-right: 150px;
+			margin-right: 170px;
 		}
 		p {
 			font-family: lato;
 			font-size: 12px;
 			line-height: 14px;
 			color: $color_4;
+			margin-right: 10px;
 		}
 	}
 }
