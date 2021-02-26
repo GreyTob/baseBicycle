@@ -45,6 +45,7 @@ $color_3: #4d4959;
 $color_4: #848789;
 $color_5: #353738;
 $color_6: #282f35;
+$color_7: #64c29e;
 
 //шаблоны
 %navfonts{
@@ -239,10 +240,9 @@ body, .wraper  {
 }
 
 .shop {
-	//height: 534px;
+	height: 735px;
 	.red_button {
 		height: 535px;
-		border: 2px solid pink;
 	}
 	.discover {
 		height: 200px;
@@ -272,22 +272,42 @@ body, .wraper  {
 }
 
 .mailing {
-	// .contain {
+	height: 470px;
+	.contain {
+		height: 100%;
 		display: flex;
-		align-items: center;
 		justify-content: center;
-		height: 470px;	
-		border: 3px solid red;
-			.img {
-				width: 94px;
-				height: 85px;
-				}	
+		align-items: center;
+	}	
+	.img {
+		margin: 0 auto;
+		width: 94px;
+		height: 85px;
+		}	
 
-			p{
-				text-align: center;
-			}
-			form {
-				text-align: center;
-			}
-	// }		
+	p {
+		text-align: center;
+		@extend %pfonts;
+		margin: 20px 0;
+		font-style: italic;
+	}
+	form {
+		height: 45px;
+		display: flex;
+	}
+	.text {
+		width: 450px;
+		padding-left: 10px;
+		font-style: italic;
+		color: $color_4;
+	}
+
+	.btn_mail {
+		@extend %navfonts;
+		width: 70px;
+		margin-left: 10px;
+		color: $color_1;
+		font-size: 20px;
+		background: $color_7;
+	}
 }

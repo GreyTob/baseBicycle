@@ -91,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-style: italic;
 }
-.header ul a {
+.mailing .btn_mail, .header ul a {
   font-family: Myriad_Pro, verdana, sans-serif;
   font-size: 0.8125em;
   line-height: 100%;
@@ -107,7 +107,7 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
 }
 
-.work_bike1 .work_small .work_text p, .work_bike2 .work_small .work_text p, .work_bike3 .work_small .work_text p, .about_us p, .twitter p {
+.mailing p, .work_bike1 .work_small .work_text p, .work_bike2 .work_small .work_text p, .work_bike3 .work_small .work_text p, .about_us p, .twitter p {
   font-family: lato, verdana, sans-serif;
   font-size: 0.8em;
   font-weight: 500;
@@ -256,9 +256,11 @@ body, .wraper {
   margin-top: 100px;
 }
 
+.shop {
+  height: 735px;
+}
 .shop .red_button {
   height: 535px;
-  border: 2px solid pink;
 }
 .shop .discover {
   height: 200px;
@@ -286,19 +288,38 @@ body, .wraper {
 }
 
 .mailing {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   height: 470px;
-  border: 3px solid red;
+}
+.mailing .contain {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .mailing .img {
+  margin: 0 auto;
   width: 94px;
   height: 85px;
 }
 .mailing p {
   text-align: center;
+  margin: 20px 0;
+  font-style: italic;
 }
 .mailing form {
-  text-align: center;
+  height: 45px;
+  display: flex;
+}
+.mailing .text {
+  width: 450px;
+  padding-left: 10px;
+  font-style: italic;
+  color: #848789;
+}
+.mailing .btn_mail {
+  width: 70px;
+  margin-left: 10px;
+  color: #f7f7f7;
+  font-size: 20px;
+  background: #64c29e;
 }
