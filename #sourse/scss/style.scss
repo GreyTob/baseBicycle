@@ -304,10 +304,10 @@ body, .wraper  {
 
 	.btn_mail {
 		@extend %navfonts;
+		background: $color_7;
 		width: 70px;
 		margin-left: 10px;
 		color: $color_1;
 		font-size: 20px;
-		background: $color_7;
 	}
 }

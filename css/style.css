@@ -317,9 +317,9 @@ body, .wraper {
   color: #848789;
 }
 .mailing .btn_mail {
+  background: #64c29e;
   width: 70px;
   margin-left: 10px;
   color: #f7f7f7;
   font-size: 20px;
-  background: #64c29e;
 }
