@@ -267,6 +267,46 @@ body, .wraper  {
 	
 }
 
+.mailing {
+	height: 470px;
+	.contain {
+		height: 100%;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}	
+	.img {
+		margin: 0 auto;
+		width: 94px;
+		height: 85px;
+		}	
+
+	p {
+		text-align: center;
+		@extend %pfonts;
+		margin: 20px 0;
+		font-style: italic;
+	}
+	form {
+		height: 45px;
+		display: flex;
+	}
+	.text {
+		width: 450px;
+		padding-left: 10px;
+		font-style: italic;
+		color: $color_4;
+	}
+	.btn_mail {
+		@extend %navfonts;
+		background: #64c29e;
+		width: 70px;
+		margin-left: 10px;
+		color: $color_1;
+		font-size: 20px;
+	}
+}
+
 .footer {
 	height: 250px;
 	background-color: #f7f7f7;
