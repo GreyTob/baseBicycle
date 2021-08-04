@@ -1,0 +1,59 @@
+let gulp = require('gulp'),
+  sass = require('gulp-sass')(require('sass')),
+  browserSync = require('browser-sync'),
+  uglify = require('gulp-uglify'),
+  concat = require('gulp-concat'),
+  rename = require('gulp-rename')
+
+//Задание для  SCSS
+//expanded - c отступами, compressed - минифицированный
+gulp.task('scss', () =>
+  gulp
+    .src('app/scss/*.scss')
+    .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('app/css'))
+    .pipe(browserSync.stream())
+)
+
+//Задание для HTML, если нет препроцессора
+gulp.task('html', () => gulp.src('app/*.html').pipe(browserSync.stream()))
+
+//Задание для JS
+//в массиве нужно узазать пути ко всем используемым файлам js. В том числе из node_modules
+gulp.task('js', function () {
+  gulp
+    .src(['app/js/main.js', 'app/js/sdfgh.js'])
+    .pipe(concat('main.min.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('app/js'))
+    .pipe(browserSync.stream())
+})
+
+// gulp.task('js_libs', function () {
+//   gulp
+//     .src(['node_modules/file-name'])
+//     .pipe(concat('libs.min.js'))
+//     .pipe(uglify())
+//     .pipe(gulp.dest('app/js'))
+//     .pipe(browserSync.stream())
+// })
+
+//live-reload с помощью gulp
+gulp.task('browser-sync', function () {
+  browserSync.init({
+    server: {
+      baseDir: 'app/',
+    },
+  })
+})
+
+//автоматически запускать компиляцию css при изменениях в scss
+gulp.task('watch', function () {
+  gulp.watch('app/scss/*.scss', gulp.parallel('scss'))
+  gulp.watch('app/*.html', gulp.parallel('html'))
+  gulp.watch('app/js/*.js', gulp.parallel('js'))
+})
+
+//дефолтная задача для одновременного запуска browser-sync и watch
+gulp.task('default', gulp.parallel('scss', 'js', 'browser-sync', 'watch'))
