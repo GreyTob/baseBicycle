@@ -1,0 +1,73 @@
+//обнуление
+*{padding: 0;margin: 0;border: 0;}
+*,*:before,*:after{-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;}
+:focus,:active{outline: none;}
+a:focus,a:active{outline: none;}
+nav,footer,header,aside{display: block;}
+html,body{height:100%;width:100%;font-size:100%;line-height:1;font-size:14px;-ms-text-size-adjust:100%;-moz-text-size-adjust:100%;-webkit-text-size-adjust:100%;}
+input,button,textarea{font-family:inherit;}
+input::-ms-clear{display: none;}
+button{cursor: pointer;}
+button::-moz-focus-inner{padding:0;border:0;}
+a,a:visited{text-decoration: none;}
+a:hover{text-decoration: none;}
+ul li{list-style: none;}
+img{vertical-align: top;}
+h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: inherit;}
+//---------
+//шрифты
+@font-face {
+	font-family: Myriad_Pro;
+	src: url('../fonts/Myriad_Pro.eot');
+	src: local('☺'), url('../fonts/Myriad_Pro.woff') format('woff'), url('../fonts/Myriad_Pro.ttf') format('truetype'), url('../fonts/Myriad_Pro.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: Lato;
+	src: url('../fonts/Lato_Bold.eot');
+	src: local('☺'), url('../fonts/Lato_Bold.woff') format('woff'), url('../fonts/Lato_Bold.ttf') format('truetype'), url('../fonts/Lato_Bold.svg') format('svg');
+	font-weight: 700;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'Lato_italic';
+	src: url('fonts/Lato_italic.eot');
+	src: local('☺'), url('../fonts/Lato_italic.woff') format('woff'), url('../fonts/Lato_italic.ttf') format('truetype'), url('../fonts/Lato_italic.svg') format('svg');
+	font-weight: 400;
+	font-style: italic;
+}
+
+//переменные
+$color_1: #f7f7f7;
+$color_2: #222429;
+$color_3: #4d4959;
+$color_4: #848789;
+$color_5: #353738;
+$color_6: #282f35;
+
+//шаблоны
+%navfonts{
+	font-family: Myriad_Pro, verdana, sans-serif;
+	font-size:  0.8125em;
+	line-height: 100%;
+	color: $color_3;
+	text-transform: uppercase;
+} 
+
+%h2fonts{
+	font-family: lato, verdana, sans-serif;
+	font-size:  1.125em;
+	line-height: 100%;
+	color: $color_5;
+	text-transform: uppercase;
+}
+
+%pfonts{
+	font-family: lato, verdana, sans-serif;
+	font-size:  0.8em;
+	font-weight: 500;
+	line-height: 35px;
+	color: $color_4;	
+}
+
