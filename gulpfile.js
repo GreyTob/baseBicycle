@@ -1,4 +1,5 @@
 let gulp = require('gulp'),
+  pug = require('gulp-pug'),
   sass = require('gulp-sass')(require('sass')),
   browserSync = require('browser-sync'),
   uglify = require('gulp-uglify'),
@@ -9,7 +10,7 @@ let gulp = require('gulp'),
 //expanded - c отступами, compressed - минифицированный
 gulp.task('scss', () =>
   gulp
-    .src('app/scss/*.scss')
+    .src('#sourse/scss/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('app/css'))
@@ -17,13 +18,27 @@ gulp.task('scss', () =>
 )
 
 //Задание для HTML, если нет препроцессора
-gulp.task('html', () => gulp.src('app/*.html').pipe(browserSync.stream()))
+// gulp.task('html', () => gulp.src('app/*.html').pipe(browserSync.stream()))
+
+//Задание для pug
+//{pretty: true} не минифицирует HTML
+gulp.task('pug', () =>
+  gulp
+    .src('#sourse/pug/index.pug')
+    .pipe(
+      pug({
+        pretty: true,
+      })
+    )
+    .pipe(gulp.dest('app/'))
+    .pipe(browserSync.stream())
+)
 
 //Задание для JS
 //в массиве нужно узазать пути ко всем используемым файлам js. В том числе из node_modules
 gulp.task('js', function () {
   gulp
-    .src(['app/js/main.js', 'app/js/sdfgh.js'])
+    .src(['app/js/main.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
@@ -50,10 +65,13 @@ gulp.task('browser-sync', function () {
 
 //автоматически запускать компиляцию css при изменениях в scss
 gulp.task('watch', function () {
-  gulp.watch('app/scss/*.scss', gulp.parallel('scss'))
-  gulp.watch('app/*.html', gulp.parallel('html'))
+  gulp.watch('#sourse/pug/*.pug', gulp.parallel('pug'))
+  gulp.watch('#sourse/scss/*.scss', gulp.parallel('scss'))
   gulp.watch('app/js/*.js', gulp.parallel('js'))
 })
 
-//дефолтная задача для одновременного запуска browser-sync и watch
-gulp.task('default', gulp.parallel('scss', 'js', 'browser-sync', 'watch'))
+//дефолтная задача для одновременного запуска browser-sync и watch и др
+gulp.task(
+  'default',
+  gulp.parallel('pug', 'scss', 'js', 'browser-sync', 'watch')
+)
