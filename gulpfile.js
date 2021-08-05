@@ -10,7 +10,7 @@ let gulp = require('gulp'),
 //expanded - c отступами, compressed - минифицированный
 gulp.task('scss', () =>
   gulp
-    .src('#sourse/scss/*.scss')
+    .src('app/scss/*.scss')
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
     .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('app/css'))
@@ -24,7 +24,7 @@ gulp.task('scss', () =>
 //{pretty: true} не минифицирует HTML
 gulp.task('pug', () =>
   gulp
-    .src('#sourse/pug/index.pug')
+    .src('app/pug/index.pug')
     .pipe(
       pug({
         pretty: true,
@@ -65,8 +65,8 @@ gulp.task('browser-sync', function () {
 
 //автоматически запускать компиляцию css при изменениях в scss
 gulp.task('watch', function () {
-  gulp.watch('#sourse/pug/*.pug', gulp.parallel('pug'))
-  gulp.watch('#sourse/scss/*.scss', gulp.parallel('scss'))
+  gulp.watch('app/pug/*.pug', gulp.parallel('pug'))
+  gulp.watch('app/scss/*.scss', gulp.parallel('scss'))
   gulp.watch('app/js/*.js', gulp.parallel('js'))
 })
 

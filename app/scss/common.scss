@@ -1,0 +1,35 @@
+@import '_reset.scss';
+@import '_typography.scss';
+@import '_header.scss';
+@import '_mainScreen.scss';
+@import '_content.scss';
+
+@import '_variables.scss';
+
+.wrapper {
+  overflow: hidden;
+  min-height: 100%;
+}
+
+.container {
+  max-width: 1130px;
+  padding: 0 15px;
+}
+
+.page {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-size: 0; //убрать отступы
+}
+
+.img {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
