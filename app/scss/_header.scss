@@ -64,11 +64,37 @@
   }
 
   &__link {
+    position: relative;
     color: $scarpa-flow;
     font-size: 13px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 2.6px;
+    transition: all 0.6s;
+  }
+  &__link:hover {
+    color: $shark;
+  }
+  &__link:after {
+    content: '';
+    position: absolute;
+    background-color: $shark;
+    width: 50%;
+    height: 1px;
+    left: -10%;
+    bottom: -4px;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &__link:hover:after {
+    content: '';
+    position: absolute;
+    background-color: $shark;
+    width: 100%;
+    height: 1px;
+    left: 0;
+    bottom: -4px;
+    opacity: 1;
   }
 
   @media (max-width: 767px) {

@@ -50,3 +50,10 @@
     }
   }
 }
+@media (max-width: 1500px) {
+  .block__text_j {
+    &:after {
+      margin: 15px auto;
+    }
+  }
+}

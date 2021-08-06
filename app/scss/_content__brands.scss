@@ -34,7 +34,30 @@
 
   &__image {
     padding: 0 0 39.5% 0;
-    background: url('../img/contant/2_min.png');
+
+    &_row1 {
+      background: url('../img/content/row1-min.png');
+    }
+    &_row2 {
+      background: url('../img/content/row2-min.png');
+    }
+    &_row3 {
+      background: url('../img/content/row3-middle.png');
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  .brands__content {
+    padding: 35px 35px 15px;
+  }
+}
+
+@media (max-width: 767px) {
+  .brands {
+    &__row {
+      flex-direction: column;
+    }
   }
 }
 
@@ -44,15 +67,73 @@
   position: relative;
 
   &__logo {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 15;
+    background-color: rgba(0, 128, 0, 0.3);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease-in;
   }
 
-  &__img {
+  &:hover {
+    .item__logo {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+
+  .logo__text {
+    font-size: 13px;
+    line-height: 15px;
+    z-index: 15;
+    text-transform: uppercase;
+    color: $cultured-pearl;
+
+    &_space {
+      letter-spacing: 2px;
+    }
+
+    &_since {
+      font-style: italic;
+      text-transform: capitalize;
+      font-size: 8px;
+      line-height: 10px;
+      color: $cultured-pearl;
+    }
+  }
+
+  &__bigImage {
     position: absolute;
-    background: url('../img/contant/1_big.png');
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
     z-index: 10;
+
+    &_row1 {
+      background: url('../img/content/row1-big.png');
+    }
+    &_row2 {
+      background: url('../img/content/row2-big.png');
+    }
+    &_row3Left {
+      background: url('../img/content/row3-left.png');
+    }
+    &_row3Right {
+      background: url('../img/content/row3-right.png');
+    }
+  }
+
+  @media (max-width: 767px) {
+    height: auto;
+    padding-bottom: 60%;
   }
 }
