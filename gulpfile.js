@@ -38,7 +38,7 @@ gulp.task('pug', () =>
 //в массиве нужно узазать пути ко всем используемым файлам js. В том числе из node_modules
 gulp.task('js', async function () {
   await gulp
-    .src(['app/js/main.js'])
+    .src(['app/js/_main.js', 'app/js/_slider_Swiper.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
@@ -46,7 +46,7 @@ gulp.task('js', async function () {
 
 // gulp.task('js_libs', function () {
 //   gulp
-//     .src(['node_modules/file-name'])
+//     .src(['node_modules/file_name'])
 //     .pipe(concat('libs.min.js'))
 //     .pipe(uglify())
 //     .pipe(gulp.dest('app/js'))
@@ -66,7 +66,7 @@ gulp.task('browser-sync', function () {
 gulp.task('watch', function () {
   gulp.watch('app/pug/*.pug', gulp.parallel('pug'))
   gulp.watch('app/scss/*.scss', gulp.parallel('scss'))
-  gulp.watch('app/js/main.js', gulp.parallel('js'))
+  gulp.watch('app/js/_*.js', gulp.parallel('js'))
 })
 
 //дефолтная задача для одновременного запуска browser-sync и watch и др

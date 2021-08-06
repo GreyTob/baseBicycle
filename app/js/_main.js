@@ -2,6 +2,7 @@
  * Функция переключает класс active у бургер-меню и меню-body при клике
  * блокируется body при открытом меню. Блок сбрасывается при экране > 767, когда исчезает бургер-меню
  */
+
 ;(function burgerMenu() {
   const burger = document.querySelector('.menu__burger')
   const menuBody = document.querySelector('.menu__body')

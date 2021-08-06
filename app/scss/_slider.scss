@@ -1,0 +1,34 @@
+.slider {
+  padding: 120px 0 35px;
+  background-color: $cultured-pearl;
+  text-align: center;
+
+  &__body {
+  }
+
+  &__item {
+  }
+
+  &__icon {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $onyx;
+    font-size: 18px;
+    font-weight: 700;
+    span {
+      font-weight: 300;
+      color: $oslo-gray;
+    }
+  }
+
+  &__text {
+    // text-align: center;
+    color: $oslo-gray;
+    font-size: 20px;
+    font-style: italic;
+    line-height: 34px;
+  }
+}
