@@ -1,7 +1,7 @@
 @import '_reset.scss';
 @import '_typography.scss';
 @import '_header.scss';
-@import '_mainScreen.scss';
+@import '_main-screen.scss';
 @import '_content.scss';
 
 @import '_variables.scss';
@@ -14,6 +14,7 @@
 .container {
   max-width: 1130px;
   padding: 0 15px;
+  margin: 0 auto;
 }
 
 .page {
@@ -22,7 +23,7 @@
   height: 100%;
   top: 0;
   left: 0;
-  overflow: hidden;
+
   display: flex;
   flex-direction: column;
   font-size: 0; //убрать отступы
@@ -32,4 +33,8 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.lock {
+  overflow: hidden;
 }
