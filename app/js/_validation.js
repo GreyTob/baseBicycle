@@ -18,8 +18,10 @@
 
     if (!checkEmail(userEmail)) {
       error.style.display = 'block'
+      email.style.border = '1px solid red'
     } else {
       error.style.display = 'none'
+      email.style.border = '1px solid #848789'
 
       //эмитация отправки
       email.value = 'Отправка...'

@@ -53,6 +53,7 @@
       font-weight: 400;
       font-style: italic;
       border: 1px solid $oslo-gray;
+      transition: all 0.3s ease-in-out;
 
       &:focus {
         color: $shark;
