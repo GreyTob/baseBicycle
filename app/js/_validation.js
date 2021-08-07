@@ -24,13 +24,13 @@
       email.style.border = '1px solid #848789'
 
       //эмитация отправки
-      email.value = 'Отправка...'
+      email.value = 'Sending...'
       btn.textContent = '. . .'
       const clk = (e) => e.preventDefault()
       form.addEventListener('click', clk)
 
       setTimeout(() => {
-        email.value = `Успешная подписка!`
+        email.value = `Subscribed!`
       }, 1000)
 
       setTimeout(() => {

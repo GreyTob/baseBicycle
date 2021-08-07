@@ -3,7 +3,7 @@
  * блокируется body при открытом меню. Блок сбрасывается при экране > 767, когда исчезает бургер-меню
  */
 
-;(function burgerMenu() {
+;(function burger() {
   const burger = document.querySelector('.menu__burger')
   const menuBody = document.querySelector('.menu__body')
   const body = document.querySelector('body')

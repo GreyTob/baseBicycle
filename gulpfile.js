@@ -38,7 +38,7 @@ gulp.task('pug', () =>
 //в массиве нужно узазать пути ко всем используемым файлам js. В том числе из node_modules
 gulp.task('js', async function () {
   await gulp
-    .src(['app/js/_main.js', 'app/js/_validation.js'])
+    .src(['app/js/_burger-menu.js', 'app/js/_validation.js'])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))
