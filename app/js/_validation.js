@@ -30,14 +30,14 @@
       form.addEventListener('click', clk)
 
       setTimeout(() => {
-        email.value = 'Спасибо за подписку'
-      }, 1500)
+        email.value = `Успешная подписка!`
+      }, 1000)
 
       setTimeout(() => {
         email.value = ''
         btn.textContent = 'GO'
         form.removeEventListener('click', clk)
-      }, 4000)
+      }, 3000)
     }
   })
 })()
