@@ -19,10 +19,10 @@
               <div class="menu__burger burger-menu"><span></span><span></span><span></span></div>
               <div class="menu__body">
                 <ul class="menu__list">
-                  <li><a class="menu__link" href="#">about us</a></li>
-                  <li><a class="menu__link" href="#">work</a></li>
-                  <li><a class="menu__link" href="#">shop</a></li>
-                  <li><a class="menu__link" href="#">contacts</a></li>
+                  <li><a class="menu__link" href="#about-us">about us</a></li>
+                  <li><a class="menu__link" href="#work">work</a></li>
+                  <li><a class="menu__link" href="#shop">shop</a></li>
+                  <li><a class="menu__link" href="#contacts">contacts</a></li>
                 </ul>
               </div>
             </nav>
@@ -33,7 +33,7 @@
           <div class="main-screen__bg img"></div>
         </div>
         <div class="content">
-          <section class="generation">
+          <section class="generation" id="about-us">
             <div class="container"> 
               <div class="generation__block block">
                 <div class="block__icon"><img src="../img/logo, icons/Icon.svg" alt="icon"></div>
@@ -42,7 +42,7 @@
               </div>
             </div>
           </section>
-          <section class="brands">
+          <section class="brands" id="work">
             <div class="brands__row">
               <div class="brands__column_big"><a class="brands__item item" href=""><span class="item__logo logo"><img src="../img/logo, icons/bycicle.svg" alt="logo-bycicle"><span class="logo__text logo__text_space">bicycle <br/> </span><span class="logo__text">company</span><span class="logo__text logo__text_since">Since 1926</span></span><span class="item__bigImage item__bigImage_row1 img"> </span></a></div>
               <div class="brands__column">
@@ -87,6 +87,21 @@
                 <div class="slider__title">AOD New York  @aod <span> /  35 min </span>  </div>
                 <div class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.</div>
               </div>
+            </div>
+          </div>
+        </section>
+        <section class="subscribe"> 
+          <div class="container"> 
+            <div class="subscribe__body"> 
+              <div class="subscribe__logo"> <img src="../img/logo, icons/Logo.svg" alt="logo"><span>Stay on the saddle! </span></div>
+              <form class="subscribe__form form" action="" method="POST">
+                <div class="form__input">
+                  <input type="email" name="email" placeholder="enter yoir email..." required>
+                </div>
+                <div class="form__btn"> 
+                  <button type="submit">GO </button>
+                </div><span class="error">неверный e-mail </span>
+              </form>
             </div>
           </div>
         </section>
