@@ -11,6 +11,11 @@
 
 @import '_variables.scss';
 
+html {
+  scroll-behavior: smooth;
+  padding-top: -10px;
+}
+
 .wrapper {
   overflow: hidden;
   min-height: 100%;

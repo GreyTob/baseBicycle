@@ -23,4 +23,17 @@
       body.classList.remove('lock')
     }
   })
+
+  menuBody.addEventListener('click', (e) => {
+    if (
+      e.target.getAttribute('href') === '#about-us' ||
+      e.target.getAttribute('href') === '#work' ||
+      e.target.getAttribute('href') === '#shop' ||
+      e.target.getAttribute('href') === '#contacts'
+    ) {
+      burger.classList.toggle('active')
+      menuBody.classList.toggle('active')
+      body.classList.remove('lock')
+    }
+  })
 })()
