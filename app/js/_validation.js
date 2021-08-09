@@ -24,6 +24,7 @@
       email.style.border = '1px solid #848789'
 
       //эмитация отправки
+      email.setAttribute('readonly', true)
       email.value = 'Sending...'
       btn.textContent = '. . .'
       const clk = (e) => e.preventDefault()
@@ -37,7 +38,15 @@
         email.value = ''
         btn.textContent = 'GO'
         form.removeEventListener('click', clk)
+        email.removeAttribute('readonly')
       }, 3000)
     }
+  })
+
+  email.addEventListener('focus', (e) => {
+    e.target.placeholder = ''
+  })
+  email.addEventListener('blur', (e) => {
+    e.target.placeholder = 'enter yoir email...'
   })
 })()

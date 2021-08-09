@@ -4,15 +4,25 @@ let gulp = require('gulp'),
   browserSync = require('browser-sync'),
   uglify = require('gulp-uglify'),
   concat = require('gulp-concat'),
-  rename = require('gulp-rename')
+  rename = require('gulp-rename'),
+  autoprefixer = require('gulp-autoprefixer'),
+  sourcemaps = require('gulp-sourcemaps')
 
 //Задание для  SCSS
 //expanded - c отступами, compressed - минифицированный
 gulp.task('scss', () =>
   gulp
     .src('app/scss/*.scss')
+    .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'compressed' }).on('error', sass.logError))
+    .pipe(
+      autoprefixer({
+        cascade: false,
+        grid: true,
+      })
+    )
     .pipe(rename({ suffix: '.min' }))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest('app/css'))
     .pipe(browserSync.stream())
 )
@@ -38,7 +48,11 @@ gulp.task('pug', () =>
 //в массиве нужно узазать пути ко всем используемым файлам js. В том числе из node_modules
 gulp.task('js', async function () {
   await gulp
-    .src(['app/js/_burger-menu.js', 'app/js/_validation.js'])
+    .src([
+      'app/js/_burger-menu.js',
+      'app/js/_validation.js',
+      'app/js/_others.js',
+    ])
     .pipe(concat('main.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('app/js'))

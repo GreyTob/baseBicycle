@@ -4,8 +4,7 @@
   "description": "adaptive landing-page",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
@@ -22,17 +21,24 @@
     "url": "https://github.com/GreyTob/baseBicycle/issues"
   },
   "homepage": "https://github.com/GreyTob/baseBicycle#readme",
-  "dependencies": {
-    "node-sass": "^6.0.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "browser-sync": "^2.27.5",
     "gulp": "^4.0.2",
+    "gulp-util": "^3.0.8",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-pug": "^5.0.0",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.0.0",
+    "gulp-sourcemaps": "^3.0.0",
     "gulp-uglify": "^3.0.2",
-    "sass": "^1.37.5"
-  }
+    "sass": "^1.37.5",
+    "postcss": "^8.3.6"
+  },
+  "browserslist": [
+    "last 5 version",
+    "> 1%",
+    "IE 10"
+  ]
 }
