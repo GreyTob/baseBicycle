@@ -5,6 +5,7 @@
   &__row {
     display: grid;
     place-items: center;
+    place-self: center;
     grid-template-columns: repeat(3, 1fr);
   }
 

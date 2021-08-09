@@ -1,9 +1,12 @@
 .slider {
-  padding: 120px 0 35px;
+  padding: 100px 0;
   background-color: $cultured-pearl;
   text-align: center;
 
-  &__body {
+  @media (max-width: 767px) {
+    & {
+      padding: 60px 0;
+    }
   }
 
   &__item {
@@ -25,10 +28,36 @@
   }
 
   &__text {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    min-height: 100%;
     // text-align: center;
     color: $oslo-gray;
     font-size: 20px;
     font-style: italic;
     line-height: 34px;
+    height: auto;
+  }
+}
+
+.glide {
+  &__slides {
+    align-items: center;
+  }
+
+  .glide__bullets {
+    bottom: -25px;
+  }
+
+  .glide__bullet {
+    width: 15px;
+    height: 15px;
+
+    background-color: $cultured-pearl;
+
+    &--active {
+      background-color: $scarpa-flow;
+    }
   }
 }

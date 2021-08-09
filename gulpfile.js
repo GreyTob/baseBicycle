@@ -58,9 +58,9 @@ gulp.task('js', async function () {
     .pipe(gulp.dest('app/js'))
 })
 
-// gulp.task('js_libs', function () {
-//   gulp
-//     .src(['node_modules/file_name'])
+// gulp.task('js_libs', async function () {
+//   await gulp
+//     .src(['node_modules/@glidejs/glide/dist/glide.js'])
 //     .pipe(concat('libs.min.js'))
 //     .pipe(uglify())
 //     .pipe(gulp.dest('app/js'))

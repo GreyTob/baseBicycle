@@ -1,22 +1,36 @@
 section.slider
   .container
-    .slider__body
-      .slider__item
-        .slider__icon
-          img(src="../img/social/twitter.png", alt="twitter")
-        .slider__title AOD New York  @aod <span> /  35 min </span>  
-        .slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.
+    .glide 
+      .glide__track(data-glide-el="track") 
+        ul.glide__slides
+          li.glide__slide 
+              .slider__item
+                .slider__icon
+                  img(src="../img/social/twitter.png", alt="twitter")
+                .slider__title AOD New York  @aod <span> /  35 min </span>  
+                .slider__text 
+                  p Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.
+          li.glide__slide 
+            .slider__item
+                .slider__icon
+                  img(src="../img/social/fb.png", alt="facebook")
+                .slider__title AOD New York  @aod <span> /  35 min </span>  
+                .slider__text 
+                  p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, unde quasi, nemo quo iste illum earum ut commodi aut labore, sint necessitatibus? Nulla placeat dolo
+          li.glide__slide 
+            .slider__item
+                .slider__icon
+                  img(src="../img/social/pinterest.png", alt="pinterest")
+                .slider__title AOD New York  @aod <span> /  35 min </span>  
+                .slider__text 
+                  p Sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat. Lorem ipsum dolor sit.
+   
 
-      //- .slider__item
-      //-   .slider__icon
-      //-     img(src="../img/social/twitter.png", alt="twitter")
-      //-   .slider__title AOD New York  @aod <span> /  35 min </span>  
-      //-   .slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.
 
-      //- .slider__item
-      //-   .slider__icon
-      //-     img(src="../img/social/twitter.png", alt="twitter")
-      //-   .slider__title AOD New York  @aod <span> /  35 min </span>  
-      //-   .slider__text Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.
+
+      .glide__bullets(data-glide-el="controls[nav]")
+        button.glide__bullet(data-glide-dir="=0")
+        button.glide__bullet(data-glide-dir="=1")
+        button.glide__bullet(data-glide-dir="=2")
 
 

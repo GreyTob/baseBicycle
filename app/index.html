@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/common.min.css">
     <script defer src="js/main.min.js"></script>
-    <script defer src="js/libs.min.js"></script>
     <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
     <title>Bicycle</title>
   </head>
@@ -79,11 +78,42 @@
         </section>
         <section class="slider">
           <div class="container">
-            <div class="slider__body">
-              <div class="slider__item">
-                <div class="slider__icon"><img src="../img/social/twitter.png" alt="twitter"></div>
-                <div class="slider__title">AOD New York  @aod <span> /  35 min </span>  </div>
-                <div class="slider__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.</div>
+            <div class="glide"> 
+              <div class="glide__track" data-glide-el="track"> 
+                <ul class="glide__slides">
+                  <li class="glide__slide"> 
+                    <div class="slider__item">
+                      <div class="slider__icon"><img src="../img/social/twitter.png" alt="twitter"></div>
+                      <div class="slider__title">AOD New York  @aod <span> /  35 min </span>  </div>
+                      <div class="slider__text"> 
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat.</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide"> 
+                    <div class="slider__item">
+                      <div class="slider__icon"><img src="../img/social/fb.png" alt="facebook"></div>
+                      <div class="slider__title">AOD New York  @aod <span> /  35 min </span>  </div>
+                      <div class="slider__text"> 
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloremque, unde quasi, nemo quo iste illum earum ut commodi aut labore, sint necessitatibus? Nulla placeat dolo</p>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="glide__slide"> 
+                    <div class="slider__item">
+                      <div class="slider__icon"><img src="../img/social/pinterest.png" alt="pinterest"></div>
+                      <div class="slider__title">AOD New York  @aod <span> /  35 min </span>  </div>
+                      <div class="slider__text"> 
+                        <p>Sit amet consectetur adipisicing elit. Omnis ex maiores velit reprehenderit nihil repellat. Lorem ipsum dolor sit.</p>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <div class="glide__bullets" data-glide-el="controls[nav]">
+                <button class="glide__bullet" data-glide-dir="=0"></button>
+                <button class="glide__bullet" data-glide-dir="=1"></button>
+                <button class="glide__bullet" data-glide-dir="=2"></button>
               </div>
             </div>
           </div>
@@ -133,5 +163,7 @@
         </footer>
       </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
+    <script>new Glide('.glide', {type: 'carousel', autoplay:15000, hoverpause: true, animationDuration:600}).mount()</script>
   </body>
 </html>

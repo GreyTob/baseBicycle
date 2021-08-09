@@ -11,6 +11,10 @@
 @import '_subscribe.scss';
 @import '_footer.scss';
 
+// Glide
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.core';
+@import 'node_modules/@glidejs/glide/src/assets/sass/glide.theme';
+
 html {
   scroll-behavior: smooth;
 }
@@ -45,10 +49,4 @@ html {
 
 .lock {
   overflow: hidden;
-}
-
-.browserslistrc {
-  last 1 version
-> 1%
-IE 10
 }
